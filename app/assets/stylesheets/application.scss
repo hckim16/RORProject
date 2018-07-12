@@ -1,16 +1,55 @@
 @import "bootstrap";
+@import "welcome";
+@import "navigation";
+@import "footer";
+
+body {
+    min-height: 50rem;
+    padding-top: 4.5rem;
+    background-color: #ffeedd;
+    overflow-x: hidden;
+}
+
+
+.white{
+    color: #ffffff;
+}
+
+.grey{
+    color: #ddcccc;
+}
+
+.small-font{
+    font-size: 11px;
+}
+
+.linktxt{
+    color:#deddee;
+}
+
+.linktxt:hover{
+    color:#ffffff;
+}
 
 .container {
     padding-top: 15px;
 }
 
 th {
-    background-color: #dddddd;
+    background-color: #553344;
+    color: #ffffff;
 }
 
 .form-control {
     background-color: #efeeef;
-    border: 2px solid #eeccdd;
+    border: 3px solid #f3b1c8;
 }
 
+.btn-light {
+    border: 3px solid #f3b1c8;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+}
 

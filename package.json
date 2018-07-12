@@ -1,5 +1,7 @@
 {
   "name": "project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "gulp-wait": "0.0.2"
+  }
 }

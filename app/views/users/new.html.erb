@@ -1,0 +1,52 @@
+<div class="row"  style="padding-top:0%;">
+    <div class="col"></div>
+        <div class="col-md-4">
+
+
+<h1>Create a New Account!</h1>
+
+<%= form_for @user do |f| %>
+<div class="field" style="100%;">
+<!-- Checking for Errors -->
+    <% if @user.errors.any? %>
+    <div id="Error_explanation">
+        <h2>
+            <%= pluralize(@user.errors.count, "errors") %>
+            prohibited this article from being saved
+        </h2>
+        <p>
+            <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li>
+                    <%= msg %>
+                </li>
+            <% end %>
+            </ul>
+        </p>
+        <% if alert %>
+        <%= alert %>
+        <% end %>
+    </div>
+    <% end %>
+
+    <%= f.text_field :userid, placeholder: "Input User ID", 
+                                 class: "form-control" %><br>
+    <%= f.email_field :email, placeholder: "Input Email", 
+                                 class: "form-control" %><br>
+    <%= f.password_field :password, placeholder: "Create a password", 
+                                 class: "form-control" %><br>
+    <%= f.password_field :password_confirmation, placeholder: "Confirm password", 
+                                 class: "form-control" %><br>
+    <%= f.submit 'Create Account' %>
+</div>
+<% end %>
+
+<p>
+    <%= link_to 'Articles', articles_path, class:'btn btn-md btn-info' %>
+    <%= link_to 'Home', welcome_index_path, class:'btn btn-md btn-primary' %>
+</p>
+
+
+        </div>  
+    <div class="col"></div>
+</div>

@@ -23,14 +23,14 @@
               <%= link_to 'Sign Out', session_path('active'), method: :delete, class: "active_nav-link" %>
             </li>
             <li class="nav-link">
-              Hi, Admin! <%= current_user.userid %>
+              Hi <%= current_user.userid %>!
             </li>
           <% elsif current_user %>
             <li class="nav-item">
               <%= link_to 'Sign Out', session_path('active'), method: :delete, class: "active_nav-link" %>
             </li>
             <li class="nav-link">
-              Hi! <%= current_user.userid %>
+              Hi <%= current_user.userid %>!
             </li>
           <% else %>
             <li class="nav-item">

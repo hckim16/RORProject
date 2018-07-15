@@ -32,7 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'paperclip', '~> 6.0'
+gem 'paperclip-av-transcoder'
+gem 'aws-sdk-s3', '~> 1.17'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1', '>= 4.1.1'

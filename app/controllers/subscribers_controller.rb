@@ -14,8 +14,14 @@ class SubscribersController < ApplicationController
         elsif @subscriber.save 
             redirect_to root_path, notice: "Thank you #{@subscriber.f_name}, for subscribing to my Newsletter."
         else 
-            redirect_to root_path alert: "Sorry, I failed to save your information. Please try again."
+            redirect_to root_path, alert: "Sorry, I failed to save your information. Please try again."
         end
+    end
+
+    def destroy
+        @subscriber = Subscriber.find(params[:id])
+        @subscriber.destroy
+        redirect_to subscribers_path
     end
     
     private def subscriber_params

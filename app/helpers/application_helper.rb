@@ -7,4 +7,25 @@ module ApplicationHelper
             return link_to nav_link, url, class: style
         end
     end
+
+    def all_country
+        countries = [
+            " ",
+            "Austria",
+            "China",
+            "Germany",
+            "Japan",
+            "Korea",
+            "New Zealand",
+            "Philippines",
+            "Spain",
+            "United States"
+        ]
+        countries.each do |country|
+            single_country = "#{country}"
+        end
+
+        # each_country = options_for_select(['Countr1', 'Countr2', 'Countr3', 'Countr4'])
+        return countries
+    end
 end
